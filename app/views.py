@@ -18,6 +18,8 @@ def gps():
 def video():
 	return render_template("video.html", title="Live Video Feed", navigation=navigation)
 
+# As of now this video_frame_generator multipart system is not working. Working on implementing an ajax solution to this problem
+
 frame_count = 0
 def video_frame_generator():
 	print "getting a frame"
@@ -31,11 +33,4 @@ def video_frame_generator():
 
 @app.route("/video_feed")
 def video_feed():
-	print "What the fuck"
-	frame = open("app/frame12.jpeg", "r").read()
-
-	def feed():
-		print "getting a frame"
-		yield "Img"
-	#return Response(feed())
 	return Response(video_frame_generator(), mimetype="multipart/x-mixed-replace; boundary=frame")

@@ -1,7 +1,7 @@
 # TXDrones Software Project 1
 ### DroneConsole
 
-DroneConsole is a webapp written with Python, Flask, Bootstrap and jQuery. It allows any web-enabled device on the same network to access the Raspberry Pi and send commands to the drone. 
+DroneConsole is a webapp written in Python, using Flask, Bootstrap and jQuery. It allows any web-enabled device on the same network to access the Raspberry Pi and send commands to the drone. 
 
 The application is divided into two components, the web server and the camera code. Both are run in separate threads. The relevant code for both is in run.py in the main directory. 
 
