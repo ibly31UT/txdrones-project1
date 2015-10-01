@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="jumbotron">
+		<h1>Welcome to DroneConsole!</h1>
+		<p>DroneConsole is a web based access point to control a drone through RaspberryPi.</p>
+		<div class="panel panel-info">
+			<div class="panel-heading">DroneConsole Functions</div>
+			<div class="panel-body">			
+				<form role="form">
+					{% for button in buttons %}
+					<a href="{{ button.link }}" class="btn btn-primary btn-lg">{{ button.name }}</a>
+					{% endfor %}
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
