@@ -7,3 +7,4 @@ The application is divided into two components, the web server and the camera co
 
 For the webserver, run.py references views.py and implicitly \__init__.py (automatically found with the line "from app import app". These set up various routing functions for the webserver to return when a URL is requested. views.py has these routing functions. The actual HTML templates are stored in app/templates and uses __jinja2__ templating engine.
 
+The folder app/static contains the css and javascript files for bootstrap, and will contain any static images we reference in the future of the webapp.
