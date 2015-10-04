@@ -19,10 +19,9 @@ class VideoThread(Thread):
 		self.rawCapture = PiRGBArray(self.camera, size=(640, 480))
 
 	def run(self):
-		self.camera.start_preview()
 		time.sleep(1) # warm up the camera
 
-		for frame in camera.capture_continuous(self.rawCapture, format="bgr", user_video_port=True):
+		for frame in camera.capture_continuous(self.rawCapture, format="bgr", use_video_port=True):
 			image = frame.array
 
 			cv2.imshow("Frame", image)
